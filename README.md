@@ -4,15 +4,14 @@
 
 1. Convert data to tfrecord
 ```
-$ DATA_DIR=your quality dataset path. (/raid.../ex.../D.../Cash/quality)
+$ DATASET_DIR=your quality dataset path (/home/.../data/mobilenet_blur_20170830)
 
 $ python download_and_convert_data.py \
       --dataset_name=quality \
-      --dataset_dir="${DATA_DIR}"
+      --dataset_dir="${DATASET_DIR}"
 ```
-  
-  
-  2. Training
+<br>  
+2. Training
 ``` 
 $ TRAIN_DIR=path to save trained model (/home/.../models/trained)
 $ DATASET_DIR=your quality dataset path (/home/.../data/mobilenet_blur_20170830)
