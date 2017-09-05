@@ -37,7 +37,7 @@ $ python train_image_classifier.py \
 
 ```
 $ DATASET_DIR=your quality dataset path (/home/.../data/mobilenet_blur_20170830)
-$ CHECKPOINT_PATH=path to load pre-trained model (/home/.../models/trained/model.ckpt-10339)
+$ CHECKPOINT_PATH=path to load trained model (/home/.../models/trained/model.ckpt-10339)
 
 $ python eval_image_classifier.py \
       --checkpoint_path=${CHECKPOINT_PATH} \
@@ -45,4 +45,25 @@ $ python eval_image_classifier.py \
       --dataset_name=quality \
       --dataset_split_name=test \
       --model_name=mobilenet_v1
+```
+- Classify
+
+List test files' absolute path into the file
+```
+$ ls -d -1 $PWD/*.* > abspath_file.txt
+```
+
+```
+$ INPUT_FILE=your test dataset list filename file (/home/.../data/mobilenet_blur_20170830/test/20170830_test_1.txt)
+$ OUTPUT_FILE=output predict file (/home/.../data/mobilenet_blur_20170830/test/pred_20170830_test_1.txt)
+$ CHECKPOINT_PATH=path to load trained model (/home/.../models/trained/model.ckpt-10339)
+
+$ python classify_image.py \
+      --infile=${INPUT_FILE} \
+      --outfile=${OUTPUT_FILE} \
+      --checkpoint_path=${CHECKPOINT_PATH} \
+      --model_name=mobilenet_v1 \
+      --preprocessing_name=inception_v3 \
+      --num_classes=2 \
+      --eval_image_size=32
 ```
