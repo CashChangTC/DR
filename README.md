@@ -1,7 +1,8 @@
 # DR
 
-## train
+## Training
 
-> 1
+> 1. Data convert
+     
 
-2
+> 2.
