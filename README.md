@@ -54,8 +54,8 @@ $ ls -d -1 $PWD/*.* > abspath_file.txt
 ```
 
 ```
-$ INPUT_FILE=your test dataset list filename file (/home/.../data/mobilenet_blur_20170830/test/20170830_test_1.txt)
-$ OUTPUT_FILE=output predict file (/home/.../data/mobilenet_blur_20170830/test/pred_20170830_test_1.txt)
+$ INPUT_FILE=file which includes test dataset's filenames (/home/.../data/mobilenet_blur_20170830/test/20170830_test_1.txt)
+$ OUTPUT_FILE=predicted result file (/home/.../data/mobilenet_blur_20170830/test/pred_20170830_test_1.txt)
 $ CHECKPOINT_PATH=path to load trained model (/home/.../models/trained/model.ckpt-10339)
 
 $ python classify_image.py \
